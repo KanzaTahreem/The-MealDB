@@ -1,3 +1,12 @@
 body {
   background-color: bisque;
 }
+
+.footer {
+  width: 80%;
+  margin-left: 50px;
+  border: solid;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 15px;
+}
