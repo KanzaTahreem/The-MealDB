@@ -46,15 +46,20 @@
   cursor: pointer;
 }
 
-main {
-  padding-top: 59px;
+.footer {
+  width: 100%;
+  padding: 1.5em 2em;
+  font-size: 2em;
+  background-color: #10141a;
+  color: #d2d1d3;
+  border: 3px solid;
 }
 
-.footer {
-  width: 80%;
-  margin-left: 50px;
-  border: solid;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 15px;
+.footer a {
+  color: #e1362c;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: green;
 }
