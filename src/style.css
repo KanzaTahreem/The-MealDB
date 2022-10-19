@@ -1,5 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.logo {
+  width: 250px;
+  padding-left: 1rem;
+}
+
+.navbar-style {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 3.5em;
+  background: #10141a;
+}
+
+.nav-link {
+  color: #e1362c;
+  font-weight: 600;
+  letter-spacing: 8px;
+  font-size: 1.2em;
+  animation: comein 3s 1 ease-in-out;
+}
+
+@keyframes comein {
+  0% {
+    letter-spacing: 20px;
+  }
+
+  70% {
+    letter-spacing: 5px;
+  }
+
+  100% {
+    letter-spacing: 8px;
+  }
+}
+
+.nav-link:hover {
+  color: green;
+  cursor: pointer;
+}
+
+main {
+  padding-top: 59px;
 }
