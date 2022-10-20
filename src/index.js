@@ -32,9 +32,12 @@ const loadInitialData = async () => {
 
     const stringElement = parser.parseFromString(string, 'text/html').body.firstChild;
     mealsSection.append(stringElement);
+    const commentbtn = stringElement.querySelector('.comment-btn');
+    commentbtn.addEventListener('click', () => {
+popup.displayPopup();
+});
   });
 };
 
 loadInitialData();
 
-popup.displayPopup();
