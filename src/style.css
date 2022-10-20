@@ -46,6 +46,32 @@
   cursor: pointer;
 }
 
+main {
+  background-color: #4f2d2b2b;
+}
+
+.headline {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 450px;
+}
+
+h1 {
+  font-size: 3.8em;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #e1362c;
+  filter: drop-shadow(2px 2px 4px gray);
+  animation-name: fadeindown;
+}
+
+.headline > p {
+  font-size: 2.5em;
+  filter: drop-shadow(2px 2px 4px gray);
+}
+
 .footer {
   width: 100%;
   padding: 1.5em 2em;
