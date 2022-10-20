@@ -3,6 +3,8 @@ import './stylesheets/slider.css';
 import './stylesheets/meals.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
+// popup Class : Handle popup tasks
+import popup from './modules/pop-up.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const parser = new DOMParser();
@@ -34,3 +36,5 @@ const loadInitialData = async () => {
 };
 
 loadInitialData();
+
+popup.displayPopup();
