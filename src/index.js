@@ -25,7 +25,7 @@ const loadInitialData = async () => {
         <div class="meal-details">
           <div class="meal-desc">
             <p class="title m-0">${data.strMeal}</p>  
-            <p class="like m-0" id="${data.idMeal}><i class="fa-solid fa-heart"></i></p>
+            <p class="like m-0" id="${data.idMeal}"><i class="fa-solid fa-heart"></i></p>
           </div>
           <button type="button" class="comment-btn">Comments</button>
         </div>
