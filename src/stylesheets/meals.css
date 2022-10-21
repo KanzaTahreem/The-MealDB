@@ -1,6 +1,6 @@
 
 .meals-section {
-  width: 82%;
+  width: 85%;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -10,17 +10,17 @@
 .meals-section > div {
   display: flex;
   flex-direction: column;
-  width: 30.7%;
+  width: 22.5em;
   align-items: center;
   padding: 1em;
   background-color: white;
   border: 1px solid red;
-  margin: 3em 1em;
+  margin: 3em 0.5em;
   box-shadow: 0 15px 15px -15px black;
 }
 
 .meal-img {
-  width: 100%;
+  width: 21em;
   height: 65%;
   border-radius: 12px;
 }
