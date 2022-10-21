@@ -34,10 +34,8 @@ const loadInitialData = async () => {
     mealsSection.append(stringElement);
     const commentbtn = stringElement.querySelector('.comment-btn');
     commentbtn.addEventListener('click', () => {
-popup.displayPopup();
-});
+      popup.displayPopup();
+    });
   });
 };
-
 loadInitialData();
-

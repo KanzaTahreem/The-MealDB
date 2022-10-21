@@ -6,7 +6,7 @@ export default class popup {
     const closeModal = document.getElementById('closeModal');
     modal.style.display = 'block';
     closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-}
+      modal.style.display = 'none';
+    });
+  }
 }

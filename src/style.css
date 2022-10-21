@@ -160,15 +160,15 @@ h1 {
 }
 
 .comments-form {
- display: flex;
- flex-direction: column;
- align-items: center;
- gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn {
-  background-color:rgb(74, 76, 76);
-  color:#e1362c;
+  background-color: rgb(74, 76, 76);
+  color: #e1362c;
   font-weight: 400;
 }
 
