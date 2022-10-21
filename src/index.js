@@ -15,7 +15,7 @@ slideShow();
 
 let mealsList = [];
 const likesArray = getLikes();
-const loadInitialData = async () => {
+const loadMealsData = async () => {
   mealsList = await getMeals();
   mealsList.meals.forEach((data) => {
     const string = `
@@ -42,7 +42,7 @@ const loadInitialData = async () => {
   });
 };
 
-loadInitialData();
+loadMealsData();
 
 mealsList.forEach((meal) => {
   const tempLikesArray = likesArray.filter((like) => like.item_id === meal.idMeal);
