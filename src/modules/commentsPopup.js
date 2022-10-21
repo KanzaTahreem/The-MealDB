@@ -1,4 +1,4 @@
-import { getData, postData } from './messages';
+import { getData, postData } from './messages.js';
 
 const getMealDetail = async (idMeal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
