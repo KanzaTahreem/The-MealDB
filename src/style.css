@@ -72,6 +72,12 @@ h1 {
   filter: drop-shadow(2px 2px 4px gray);
 }
 
+.items-counter {
+  color: #e1362c;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+}
+
 .footer {
   width: 100%;
   padding: 1.5em 2em;
