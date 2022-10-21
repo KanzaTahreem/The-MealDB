@@ -4,9 +4,11 @@ import './stylesheets/meals.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
 // popup Class : Handle popup tasks
-import popup from './modules/pop-up.js';
+import './stylesheets/comment.css';
+import showPopup from './modules/commentsPopup.js';
 
 const mealsSection = document.querySelector('.meals-section');
+const popUpSection = document.querySelector('.popup-section');
 const parser = new DOMParser();
 
 slideShow();
@@ -32,9 +34,12 @@ const loadInitialData = async () => {
 
     const stringElement = parser.parseFromString(string, 'text/html').body.firstChild;
     mealsSection.append(stringElement);
+
     const commentbtn = stringElement.querySelector('.comment-btn');
-    commentbtn.addEventListener('click', () => {
-      popup.displayPopup();
+    commentbtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      popUpSection.classList.remove('hidden');
+      showPopup(data.idMeal);
     });
   });
 };
