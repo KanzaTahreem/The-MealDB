@@ -8,7 +8,7 @@ const popUpSection = document.querySelector('.popup-section');
 
 const showPopup = async (idMeal) => {
   popUpSection.innerHTML = '';
-  
+
   getMealDetail(idMeal).then((meal) => {
     const string = `
     <div class="popup">
