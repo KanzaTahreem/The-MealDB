@@ -3,6 +3,7 @@ import './stylesheets/slider.css';
 import './stylesheets/meals.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
+
 // popup Class : Handle popup tasks
 import './stylesheets/comment.css';
 import showPopup from './modules/commentsPopup.js';

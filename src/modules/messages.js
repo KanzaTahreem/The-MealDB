@@ -1,4 +1,4 @@
-const url = https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ngliiMWYNlvOIhJPbqhb/comments;
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/ngliiMWYNlvOIhJPbqhb/comments';
 
 const getData = async () => {
   const { result } = await fetch(url).then((response) => response.json());
