@@ -5,6 +5,7 @@ import './stylesheets/comment.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
 import showPopup from './modules/commentsPopup.js';
+import { getLikes } from './modules/getLikes.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
@@ -13,6 +14,7 @@ const parser = new DOMParser();
 slideShow();
 
 let mealsList = [];
+const likesArray = getLikes();
 const loadInitialData = async () => {
   mealsList = await getMeals();
   mealsList.meals.forEach((data) => {
@@ -41,3 +43,13 @@ const loadInitialData = async () => {
 };
 
 loadInitialData();
+
+mealsList.forEach((meal) => {
+  const tempLikesArray = likesArray.filter((like) => like.item_id === meal.idMeal);
+  if (tempLikesArray.length === 0) {
+    likesArray.push({
+      likes: 0,
+      item_id: meal.mealId,
+    });
+  }
+});
