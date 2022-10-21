@@ -6,6 +6,7 @@ import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
 import showPopup from './modules/commentsPopup.js';
 import { getLikes, postLike } from './modules/getLikes.js';
+import ItemsCounter from './modules/counter/itemsCounter';
 
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
@@ -64,6 +65,9 @@ const init = async () => {
       showPopup(mealWithLike.idMeal);
     });
   });
+  const totalItems = ItemsCounter();
+  const itemsCounterEl = document.querySelector('.items-counter');
+  itemsCounterEl.innerHTML = `(${totalItems})`;
 };
 
 init();
