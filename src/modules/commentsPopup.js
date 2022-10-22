@@ -1,4 +1,4 @@
-import { getComments } from './comment.js';
+import { getComments, postComment } from './comment.js';
 
 const getMealDetail = async (idMeal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
@@ -37,22 +37,27 @@ const showPopup = async (idMeal) => {
           <p>${meal.meals[0].strInstructions}</p>  
           <div class="tags"> <b>Tags:</b> ${(meal.meals[0].strTags || '').split(',').map((el) => `<code class='tag'>${el}</code>`)}</div>
         </div>
-      </div> 
+      </div>
+
+      <h3>Comments</h3>  
       <div class='meal-comments'> 
-      <h3>Comments</h3>
       ${commentsList ? commentsList.map((comment) => `
-        <div class="comment d-flex justify-content-between mb-3">
+        <div class="comment d-flex justify-content-between align-items-center mb-3">
           <div class="d-flex justify-content-between align-items-center p-1">
             <div class="username"><b>${comment.username}:</b></div>
-            <div class="date">${comment.creation_date}</div>
+            <div class="message">${comment.comment}</div>
           </div>
-          
-          <div class="message">${comment.comment}</div>
-
+        <div class="date">${comment.creation_date}</div>
         </div>
       `).join('') : ''}
+      
       </div>
-    </div>`;
+        <form class="post-comments">
+          <input type="text" name="username" class="user-name">
+          <textarea class="user-comment" name="comment"></textarea>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>`;
 
     const parser = new DOMParser();
 
@@ -63,6 +68,34 @@ const showPopup = async (idMeal) => {
     closeBtn.addEventListener('click', (e) => {
       e.preventDefault();
       popUpSection.classList.add('hidden');
+    });
+
+    const form = stringElement.querySelector('form');
+
+    const commentSection = document.querySelector('.meal-comments');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const user = formData.get('username');
+      const message = formData.get('comment');
+      postComment(idMeal, user, message);
+      let today = new Date();
+      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const yyyy = today.getFullYear();
+
+      today = `${mm}/${dd}/${yyyy}`;
+      const commentString = `
+        <div class="comment d-flex justify-content-between mb-3">
+          <div class="d-flex justify-content-between align-items-center p-1">
+            <div class="username"><b>${user}:</b></div>
+            <div class="date">${today}</div>
+          </div>
+        <div class="message">${message}</div>
+      </div>`;
+      const commentElement = parser.parseFromString(commentString, 'text/html').body.firstChild;
+      commentSection.append(commentElement);
+      form.reset();
     });
   });
 };
