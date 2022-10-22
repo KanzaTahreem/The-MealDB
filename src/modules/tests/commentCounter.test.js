@@ -3,6 +3,7 @@
  */
 import commentsCounter from '../counter/commentCounter.js';
 
+//test1
 describe('Counting the number of comments', () => {
   test('Return number of comments', () => {
     const comments = [
@@ -13,5 +14,14 @@ describe('Counting the number of comments', () => {
     ];
     const result = commentsCounter(comments);
     expect(result).toBe(4);
+  });
+});
+
+//test2
+describe('Counting the number of comments', () => {
+  test('Return number of comments', () => {
+    const comments = [];
+    const result = commentsCounter(comments);
+    expect(result).toBe(0);
   });
 });
