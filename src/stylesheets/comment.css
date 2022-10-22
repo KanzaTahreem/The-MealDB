@@ -1,4 +1,4 @@
-.popup-section {
+.popup-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +14,18 @@
   overflow-y: scroll;
   color: #d2d1d3;
   background-color: #2e3130;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #afabb3;
+  position: fixed;
+  backdrop-filter: blur(6px);
+  mix-blend-mode: multiply;
 }
 
 .popup-details {
