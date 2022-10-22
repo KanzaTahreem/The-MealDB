@@ -93,7 +93,7 @@ h3 {
   margin: 0 auto;
 }
 
-.comment  {
+.comment {
   flex-direction: column;
   gap: 1.2em;
 }
@@ -115,6 +115,7 @@ h3 {
   border-radius: 10px;
   border: 1px solid red;
 }
+
 .hidden {
   display: none !important;
 }
