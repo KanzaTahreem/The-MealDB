@@ -36,7 +36,7 @@ const init = async () => {
           <div class="meal-desc">
             <p class="title m-0">${mealWithLike.strMeal}</p>
             <div class="like m-0" id="${mealWithLike.idMeal}">
-              <p class='likes'>${mealWithLike.likes}</p>
+              <p class='likes m-0'>${mealWithLike.likes}</p>
               <i class="fa-solid fa-heart like-btn"></i>
             </div>
           </div>

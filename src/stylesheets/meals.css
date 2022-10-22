@@ -75,3 +75,14 @@ button:hover {
   letter-spacing: 10px;
   transition: all 0.5s ease-in;
 }
+
+.like {
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+}
+
+.likes {
+  padding-right: 0.4em;
+  font-weight: bold;
+}

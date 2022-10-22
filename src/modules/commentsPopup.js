@@ -52,6 +52,7 @@ const showPopup = async (idMeal) => {
       `).join('') : ''}
       
       </div>
+        <h3>Add a new Comment</h3>
         <form class="post-comments">
           <input type="text" name="username" class="user-name">
           <textarea class="user-comment" name="comment"></textarea>

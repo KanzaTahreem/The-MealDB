@@ -44,6 +44,8 @@
 .nav-link:hover {
   color: green;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+  transform: scale(1.1);
 }
 
 main {
@@ -94,94 +96,8 @@ h1 {
 
 .footer a:hover {
   color: green;
-}
-
-.popuphidden {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  background-color: #c1c7d0a6;
-  backdrop-filter: blur(3px);
-  height: 100vh;
-  z-index: 1000;
-}
-
-.popupcard {
-  background-color: #fff;
-  border: 1px solid #dfe1e6;
-  border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  height: auto;
-  overflow-y: scroll;
-  margin: 20px;
-}
-
-.poptitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #172b4d;
-  font-size: 32px;
-  font-weight: 700;
-}
-
-.popclose {
-  align-content: end;
-  right: 35px;
-  float: right;
-  width: 20px;
-  position: absolute;
-}
-
-.popdetail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  color: #7a869a;
-  margin-left: 16px;
-}
-
-.popimg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popdescrip {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  color: #344563;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-.hidden {
-  display: none;
-}
-
-.comments-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.btn {
-  background-color: rgb(74, 76, 76);
-  color: #e1362c;
-  font-weight: 400;
-}
-
-.comments-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  transition: all 0.3s ease-in;
+  transform: scale(1.1);
 }
 
 ::-webkit-scrollbar {
