@@ -1,4 +1,5 @@
 import { getComments, postComment } from './comment.js';
+import commentsCounter from './counter/commentCounter.js'; // counter wala krna hai
 
 const getMealDetail = async (idMeal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
@@ -39,7 +40,7 @@ const showPopup = async (idMeal) => {
         </div>
       </div>
 
-      <h3>Comments</h3>  
+      <h3 class="counter">Comments(<b class="total-comments">0</b>)</h3>  
       <div class='meal-comments'> 
       ${commentsList ? commentsList.map((comment) => `
         <div class="comment d-flex justify-content-between align-items-center mb-3">
@@ -70,10 +71,12 @@ const showPopup = async (idMeal) => {
       e.preventDefault();
       popUpSection.classList.add('hidden');
     });
-
     const form = stringElement.querySelector('form');
 
     const commentSection = document.querySelector('.meal-comments');
+    const commentsCounterEl = stringElement.querySelector('.total-comments');
+    commentsCounterEl.innerHTML = `${commentsCounter()}`;
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const formData = new FormData(form);
@@ -90,13 +93,15 @@ const showPopup = async (idMeal) => {
         <div class="comment d-flex justify-content-between mb-3">
           <div class="d-flex justify-content-between align-items-center p-1">
             <div class="username"><b>${user}:</b></div>
-            <div class="date">${today}</div>
+            <div class="message">${message}</div>
           </div>
-        <div class="message">${message}</div>
+        <div class="date">${today}</div>
       </div>`;
+
       const commentElement = parser.parseFromString(commentString, 'text/html').body.firstChild;
       commentSection.append(commentElement);
       form.reset();
+      commentsCounterEl.innerHTML = `${commentsCounter()}`;
     });
   });
 };
