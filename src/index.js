@@ -7,6 +7,8 @@ import getMeals from './modules/getMeals.js';
 import showPopup from './modules/commentsPopup.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import ItemsCounter from './modules/counter/itemsCounter';
+import { postComment, getComments } from './modules/comment.js'
+
 
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
