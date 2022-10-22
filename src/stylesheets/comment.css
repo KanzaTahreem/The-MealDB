@@ -1,0 +1,158 @@
+.popup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  width: 60%;
+  height: 90vh;
+  padding: 30px 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  overflow-y: scroll;
+  color: #d2d1d3;
+  background-color: #2e3130;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #afabb3;
+  position: fixed;
+  backdrop-filter: blur(6px);
+  mix-blend-mode: multiply;
+}
+
+.popup-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close {
+  float: right;
+}
+
+.popup-img {
+  width: 65%;
+  height: 50vh;
+  filter: drop-shadow(2px 4px 6px black);
+  border-radius: 10px;
+}
+
+.popup-desc {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  font-size: 1.1em;
+  padding: 2.5em 0;
+}
+
+h3 {
+  align-self: center;
+  text-align: center;
+  font-size: 2em;
+  padding: 2em 0 1em 0;
+  font-weight: bold;
+  filter: drop-shadow(2px 4px 6px black);
+  letter-spacing: 2px;
+}
+
+.popup-desc b {
+  color: #e1362c;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.meal-links {
+  display: flex;
+  gap: 2em;
+  width: 60%;
+}
+
+.meal-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.popup-desc ul {
+  list-style-type: circle;
+}
+
+.popup-desc li {
+  letter-spacing: 3px;
+  font-style: italic;
+}
+
+.tags,
+.tag {
+  display: flex;
+  align-items: baseline;
+}
+
+.tag {
+  align-items: center;
+  letter-spacing: 2px;
+  color: #d2d1d3;
+  margin-left: 6px;
+}
+
+.meal-comments {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.comment b {
+  color: #e1362c;
+  letter-spacing: 3px;
+  font-size: 1.2em;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.message {
+  padding: 0 0.5em;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+form > input,
+form > textarea {
+  background: transparent;
+  outline: none;
+  border: 1px solid #e1362c;
+  border-radius: 6px;
+  box-shadow: 0 9px 9px -7px black;
+  filter: drop-shadow(2px 4px 6px black);
+  color: #d2d1d3;
+  padding: 1em;
+}
+
+form > input {
+  height: 45px;
+}
+
+form > textarea {
+  height: 150px;
+}
+
+.hidden {
+  display: none !important;
+}

@@ -1,0 +1,88 @@
+
+.meals-section {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.meals-section > div {
+  display: flex;
+  flex-direction: column;
+  width: 22.5em;
+  align-items: center;
+  padding: 1em;
+  background-color: white;
+  border: 1px solid red;
+  margin: 3em 0.5em;
+  box-shadow: 0 15px 15px -15px black;
+}
+
+.meal-img {
+  width: 21em;
+  height: 65%;
+  border-radius: 12px;
+}
+
+.meal-desc {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding-top: 1.5em;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.meal-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+i {
+  color: #e1362c;
+  font-size: 1.9em;
+  transition: all 0.3s ease-in;
+}
+
+i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+button {
+  background: #e1362c;
+  padding: 0.5em 1.5em;
+  color: white;
+  letter-spacing: 6px;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  transition: all 0.5s ease-in;
+  box-shadow: 0 15px 10px -12px black;
+}
+
+button:hover {
+  letter-spacing: 10px;
+  transition: all 0.5s ease-in;
+}
+
+.like {
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+}
+
+.likes {
+  padding-right: 0.4em;
+  font-weight: bold;
+}

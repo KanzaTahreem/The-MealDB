@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.slider.active-slider {
+  display: flex;
+  height: 95vh;
+}
+
+.slider-section {
+  width: 100%;
+}
+
+span {
+  height: 95vh;
+  background: #cd30308f;
+  color: white;
+  font-size: 3em;
+  font-weight: 700;
+  width: 31%;
+  display: flex;
+  margin: 0 3em;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 8px;
+  z-index: 1;
+  padding: 3rem;
+  position: absolute;
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 69%;
+  }
+
+  to {
+    margin-left: 3em;
+  }
+}
