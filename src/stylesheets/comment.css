@@ -22,6 +22,10 @@
   align-items: center;
 }
 
+.close {
+  float: right;
+}
+
 .popup-img {
   width: 65%;
   height: 50vh;
