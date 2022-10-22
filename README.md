@@ -26,7 +26,7 @@ Live at [MealDB](https://kanzatahreem.github.io/JavaScript-Capstone/)
 
 ## Video Description
 
-View [video presentaton](https://drive.google.com/drive/folders/1ZV-ArD71jPQc99O6imr0jM12MezK-FVO)
+View [video presentaton](https://drive.google.com/file/d/15EJIl7FRh6fjecDbtRE1uvWspvTicPxb/view?usp=sharing)
 
 ## Getting Started
 
