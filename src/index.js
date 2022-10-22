@@ -3,7 +3,7 @@ import './stylesheets/slider.css';
 import './stylesheets/meals.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
-import { getData, postData } from './modules/messages';
+import { postComment, getComments } from './modules/comment.js';
 
 // popup Class : Handle popup tasks
 import './stylesheets/comment.css';

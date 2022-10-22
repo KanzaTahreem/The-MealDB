@@ -1,4 +1,5 @@
-import { getData, postData } from './messages.js';
+
+import { getComments } from './comment.js';
 
 const getMealDetail = async (idMeal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
@@ -10,6 +11,8 @@ const popUpSection = document.querySelector('.popup-section');
 
 const showPopup = async (idMeal) => {
   popUpSection.innerHTML = '';
+
+  const commentsList = await getComments(idMeal);
 
   getMealDetail(idMeal).then((meal) => {
     const string = `
@@ -36,6 +39,20 @@ const showPopup = async (idMeal) => {
           <div class="tags"> <b>Tags:</b> ${(meal.meals[0].strTags || '').split(',').map((el) => `<code class='tag'>${el}</code>`)}</div>
         </div>
       </div> 
+      <div class='meal-comments'> 
+      <h3>Comments</h3>
+      ${commentsList ? commentsList.map((comment) => `
+        <div class="comment d-flex justify-content-between mb-3">
+          <div class="d-flex justify-content-between align-items-center p-1">
+            <div class="username"><b>${comment.username}:</b></div>
+            <div class="date">${comment.creation_date}</div>
+          </div>
+          
+          <div class="message">${comment.comment}</div>
+
+        </div>
+      `).join('') : ''}
+      </div>
     </div>`;
 
     const parser = new DOMParser();
