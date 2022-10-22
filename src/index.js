@@ -6,7 +6,7 @@ import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
 import showPopup from './modules/commentsPopup.js';
 import { getLikes, postLike } from './modules/getLikes.js';
-import ItemsCounter from './modules/counter/itemsCounter';
+import ItemsCounter from './modules/counter/itemsCounter.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
