@@ -16,3 +16,11 @@ test('should return 0 if .meal-comments is not present', () => {
   document.body.innerHTML = '';
   expect(commentsCounter()).toBe(0);
 });
+
+describe('Counting the number of comments', () => {
+  test('Return number of comments', () => {
+    const comments = [];
+    const result = commentsCounter(comments);
+    expect(result).toBe(0);
+  });
+});
