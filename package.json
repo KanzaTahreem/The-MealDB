@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KanzaTahreem/Webpack.git"
+    "url": "git+https://github.com/KanzaTahreem/JavaScript-Capstone.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KanzaTahreem/Webpack/issues"
+    "url": "https://github.com/KanzaTahreem/JavaScript-Capstone/issues"
   },
-  "homepage": "https://github.com/KanzaTahreem/Webpack#readme",
+  "homepage": "https://github.com/KanzaTahreem/JavaScript-Capstone#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "babel-eslint": "^10.1.0",
