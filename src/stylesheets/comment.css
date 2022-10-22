@@ -14,7 +14,6 @@
   overflow-y: scroll;
   color: #d2d1d3;
   background-color: #2e3130;
-  filter: drop-shadow(2px 4px 6px black);
 }
 
 .backdrop {
