@@ -22,23 +22,44 @@
   <script defer src="main.js"></script></head>
   <body>
     <header>
-      <nav class="nav navbar-style">
+      <div div class="nav navbar-style">
         <a href="./index.html">
           <img src="assets/logo0.png" alt="MealDB" class="logo" />
         </a>
 
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#menu">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="bars">
+          <i class="fa-solid fa-bars hamburger mobile-menu"></i>
+
+          <ul class="mobile-menu-item">
+            <li class="navitem">
+              <i class="fa-solid fa-xmark x-mark"></i>
+            </li>
+            <li class="nav-item mobile-link">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item mobile-link">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item mobile-link">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="main-menu">
+          <ul class="nav m-0">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -75,7 +96,6 @@
         <a href="https://github.com/KanzaTahreem">Kanza Tahreem</a> and
         <a href="https://github.com/OsvaldoBC">Osvaldo Barrios</a>
       </p>
-      <p class="footer-links m-0"></p>
     </footer>
 
     <script
