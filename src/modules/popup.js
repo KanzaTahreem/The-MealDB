@@ -1,4 +1,4 @@
-import { getComments, postComment } from './comment.js';
+import { getComments, postComment } from './getComments.js';
 import commentsCounter from './counter/commentCounter.js'; // counter wala krna hai
 
 const getMealDetail = async (idMeal) => {

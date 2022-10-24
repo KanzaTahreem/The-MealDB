@@ -4,7 +4,7 @@ import './stylesheets/meals.css';
 import './stylesheets/comment.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
-import showPopup from './modules/commentsPopup.js';
+import showPopup from './modules/popup.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import ItemsCounter from './modules/counter/itemsCounter.js';
 
