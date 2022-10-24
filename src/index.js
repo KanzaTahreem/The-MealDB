@@ -37,7 +37,7 @@ const init = async () => {
             <p class="title m-0">${mealWithLike.strMeal}</p>
             <div class="like m-0" id="${mealWithLike.idMeal}">
               <p class='likes m-0'>${mealWithLike.likes}</p>
-              <i class="fa-solid fa-heart like-btn"></i>
+              <i class="far fa-heart like-btn"></i>
             </div>
           </div>
           <button type="button" class="comment-btn">Comments</button>
@@ -54,6 +54,9 @@ const init = async () => {
       postLike(mealWithLike.idMeal);
       mealWithLike.likes += 1;
       likeEl.innerHTML = `${mealWithLike.likes}`;
+      e.target.classList.remove('far');
+      e.target.classList.add('fas');
+      likeEl.style.color = '#e1362c';
     });
 
     mealsSection.append(stringElement);
