@@ -10,7 +10,7 @@
 
 .slider.active-slider {
   display: flex;
-  height: 95vh;
+  height: 100vh;
 }
 
 .slider-section {
@@ -18,12 +18,11 @@
 }
 
 span {
-  height: 95vh;
+  height: 100vh;
   background: #cd30308f;
   color: white;
   font-size: 3em;
   font-weight: 700;
-  width: 31%;
   display: flex;
   margin: 0 3em;
   align-items: center;
@@ -39,10 +38,16 @@ span {
 
 @keyframes slidein {
   from {
-    margin-left: 69%;
+    margin-left: 60%;
   }
 
   to {
     margin-left: 3em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  span {
+    width: 31%;
   }
 }

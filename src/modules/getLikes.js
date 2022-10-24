@@ -8,8 +8,8 @@ const postLike = async (itemId) => {
       'Content-Type': 'application/json',
     },
   });
-  const responseJSON = await response.text();
-  return responseJSON;
+  const responseText = await response.text();
+  return responseText;
 };
 
 const getLikes = async () => {

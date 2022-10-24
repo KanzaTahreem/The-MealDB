@@ -4,10 +4,13 @@ import './stylesheets/meals.css';
 import './stylesheets/comment.css';
 import slideShow from './modules/slider.js';
 import getMeals from './modules/getMeals.js';
-import showPopup from './modules/commentsPopup.js';
+import showPopup from './modules/popup.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import ItemsCounter from './modules/counter/itemsCounter.js';
 
+const mobileMenuItem = document.querySelector('.mobile-menu-item');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeBtn = document.querySelector('.x-mark');
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
 const parser = new DOMParser();
@@ -37,7 +40,7 @@ const init = async () => {
             <p class="title m-0">${mealWithLike.strMeal}</p>
             <div class="like m-0" id="${mealWithLike.idMeal}">
               <p class='likes m-0'>${mealWithLike.likes}</p>
-              <i class="fa-solid fa-heart like-btn"></i>
+              <i class="far fa-heart like-btn"></i>
             </div>
           </div>
           <button type="button" class="comment-btn">Comments</button>
@@ -54,6 +57,9 @@ const init = async () => {
       postLike(mealWithLike.idMeal);
       mealWithLike.likes += 1;
       likeEl.innerHTML = `${mealWithLike.likes}`;
+      e.target.classList.remove('far');
+      e.target.classList.add('fas');
+      likeEl.style.color = '#e1362c';
     });
 
     mealsSection.append(stringElement);
@@ -71,3 +77,21 @@ const init = async () => {
 };
 
 init();
+
+mobileMenu.addEventListener('click', () => {
+  mobileMenuItem.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+  mobileMenuItem.style.display = 'none';
+});
+
+const mobileLink = Array.from(
+  document.getElementsByClassName('mobile-link'),
+);
+
+mobileLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    mobileMenuItem.style.display = 'none';
+  });
+});

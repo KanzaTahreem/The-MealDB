@@ -48,14 +48,15 @@
 }
 
 i {
-  color: #e1362c;
   font-size: 1.9em;
-  transition: all 0.3s ease-in;
 }
 
 i:hover {
-  transform: scale(1.2);
   cursor: pointer;
+}
+
+.fas {
+  color: #e1362c;
 }
 
 button {

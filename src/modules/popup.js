@@ -1,5 +1,5 @@
-import { getComments, postComment } from './comment.js';
-import commentsCounter from './counter/commentCounter.js'; // counter wala krna hai
+import { getComments, postComment } from './getComments.js';
+import commentsCounter from './counter/commentCounter.js';
 
 const getMealDetail = async (idMeal) => {
   const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`);
@@ -8,6 +8,7 @@ const getMealDetail = async (idMeal) => {
 };
 
 const popUpSection = document.querySelector('.popup-section');
+const parser = new DOMParser();
 
 const showPopup = async (idMeal) => {
   popUpSection.innerHTML = '<div class="backdrop"></div>';
@@ -56,14 +57,12 @@ const showPopup = async (idMeal) => {
         </div>
           <h3>Add a new Comment</h3>
           <form class="post-comments">
-            <input type="text" name="username" class="user-name" placeholder="Your name">
-            <textarea class="user-comment" name="comment" placeholder="Your insights"></textarea>
+            <input type="text" name="username" class="user-name" placeholder="Your name" required>
+            <textarea class="user-comment" name="comment" placeholder="Your insights" required></textarea>
             <button type="submit" class="submit-btn">Submit</button>
           </form>
         </div>
       </div>`;
-
-    const parser = new DOMParser();
 
     const stringElement = parser.parseFromString(string, 'text/html').body.firstChild;
     popUpSection.append(stringElement);
@@ -73,10 +72,11 @@ const showPopup = async (idMeal) => {
       e.preventDefault();
       popUpSection.classList.add('hidden');
     });
-    const form = stringElement.querySelector('form');
 
+    const form = stringElement.querySelector('form');
     const commentSection = document.querySelector('.meal-comments');
     const commentsCounterEl = stringElement.querySelector('.total-comments');
+
     commentsCounterEl.innerHTML = `${commentsCounter()}`;
 
     form.addEventListener('submit', (e) => {
@@ -89,8 +89,8 @@ const showPopup = async (idMeal) => {
       const dd = String(today.getDate()).padStart(2, '0');
       const mm = String(today.getMonth() + 1).padStart(2, '0');
       const yyyy = today.getFullYear();
-
       today = `${mm}/${dd}/${yyyy}`;
+
       const commentString = `
         <div class="comment d-flex justify-content-between mb-3">
           <div class="d-flex justify-content-between align-items-center p-1">
