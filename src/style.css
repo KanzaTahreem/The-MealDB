@@ -10,26 +10,68 @@
 .logo {
   width: 250px;
   padding-left: 1rem;
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+  color: #e1362c;
 }
 
 .navbar-style {
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 3.5em;
-  background: #10141a;
+  position: absolute;
+  width: 100%;
+}
+
+.bars {
+  width: 100%;
+  z-index: 10;
+  background: #0009;
+}
+
+.mobile-menu {
+  color: #e1362c;
+  padding: 2em;
+}
+
+.mobile-menu-item {
+  backdrop-filter: blur(23px);
+  background: #10141a82;
+  padding: 4em 2em;
+  display: none;
+  height: 100vh;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.main-menu {
+  display: none;
+}
+
+.x-mark {
+  padding: 0 0 3em 0.5em;
+}
+
+.display {
+  display: none;
 }
 
 .nav-link {
   color: #e1362c;
   font-weight: 600;
   letter-spacing: 8px;
-  font-size: 1.2em;
+  font-size: 2.2em;
   animation: comein 3s 1 ease-in-out;
 }
 
 @keyframes comein {
   0% {
-    letter-spacing: 20px;
+    letter-spacing: 9px;
   }
 
   70% {
@@ -98,6 +140,38 @@ h1 {
   color: green;
   transition: all 0.3s ease-in;
   transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .bars {
+    width: 0;
+  }
+
+  .main-menu {
+    display: flex;
+  }
+
+  .x-mark {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 1.2em;
+  }
+
+  .navbar-style {
+    padding: 0.5em 4.5em;
+    background: #10141a;
+    z-index: 10;
+  }
 }
 
 ::-webkit-scrollbar {

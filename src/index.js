@@ -8,6 +8,9 @@ import showPopup from './modules/popup.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import ItemsCounter from './modules/counter/itemsCounter.js';
 
+const mobileMenuItem = document.querySelector('.mobile-menu-item');
+const mobileMenu = document.querySelector('.mobile-menu');
+const closeBtn = document.querySelector('.x-mark');
 const mealsSection = document.querySelector('.meals-section');
 const popUpSection = document.querySelector('.popup-section');
 const parser = new DOMParser();
@@ -74,3 +77,21 @@ const init = async () => {
 };
 
 init();
+
+mobileMenu.addEventListener('click', () => {
+  mobileMenuItem.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+  mobileMenuItem.style.display = 'none';
+});
+
+const mobileLink = Array.from(
+  document.getElementsByClassName('mobile-link'),
+);
+
+mobileLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    mobileMenuItem.style.display = 'none';
+  });
+});
