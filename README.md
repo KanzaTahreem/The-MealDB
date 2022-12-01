@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# JavaScript Capstone - API-based webapp
+# The MealDB - API based webapp
 
 > The JavaScript capstone project is build on [MealDB](www.themealdb.com/api/json/v1/1/filter.php?c=Seafood), an external API, and an [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) which is used to record the user interactions including likes, and comments. The project covers the following mentioned points
 
@@ -15,14 +15,15 @@
 
 - HTML & CSS
 - Bootstrap
-- JavaScript(ES6)
+- JavaScript (ES6)
 - Webpack
 - Jest Testing Library
-- [HTML, CSS & JavaScript Linters](https://github.com/microverseinc/linters-config/tree/master/html-css-js)
+- [MealDB API](www.themealdb.com/api/json/v1/1/filter.php?c=Seafood)
+- [Linters](https://github.com/microverseinc/linters-config/tree/master/html-css-js)
 
 ## Live Demo
 
-Live at [MealDB](https://kanzatahreem.github.io/JavaScript-Capstone/)
+Live at [MealDB](https://kanzatahreem.github.io/The-MealDB/)
 
 ## Video Description
 
@@ -43,7 +44,7 @@ To get a local copy, follow the steps below:
 2. Navigate to the directory where you want to clone the project.
 3. Clone the project using `git clone` or directly by running the following command
 
-   `git clone git@github.com:KanzaTahreem/JavaScript-Capstone.git`
+   `git clone git@github.com:KanzaTahreem/The-MealDB.git`
 
 4. Open your editor and follow the steps mentioned below
 
@@ -76,7 +77,7 @@ To get a local copy, follow the steps below:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/KanzaTahreem/Leaderboard/issues).
+Feel free to check the [issues page](https://github.com/KanzaTahreem/The-MealDB/issues).
 
 ## Show your support
 

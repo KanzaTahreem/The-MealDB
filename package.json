@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KanzaTahreem/JavaScript-Capstone.git"
+    "url": "git+https://github.com/KanzaTahreem/The-MealDB.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KanzaTahreem/JavaScript-Capstone/issues"
+    "url": "https://github.com/KanzaTahreem/The-MealDB/issues"
   },
-  "homepage": "https://github.com/KanzaTahreem/JavaScript-Capstone#readme",
+  "homepage": "https://github.com/KanzaTahreem/The-MealDB#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
     "babel-eslint": "^10.1.0",
